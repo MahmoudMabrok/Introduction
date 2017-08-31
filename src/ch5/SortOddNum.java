@@ -41,8 +41,9 @@ public class SortOddNum {
         }
 
         Collections.sort(val_odd);
-        for (int i = 0; i <val_odd.size() ; i++) {
-            input[index_odd.get(i)] = val_odd.get(i) ; // place number in place
+
+        for (int i = 0 , j= val_odd.size()-1 ; i <val_odd.size() ; i++ , j--) {
+            input[index_odd.get(j)] = val_odd.get(i) ; // place number in place
         }
 
         return input ;
