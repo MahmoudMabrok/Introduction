@@ -7,6 +7,12 @@ package ch6;
 public class TEST {
 
     public static void main(String[] args) {
+
+        //test ambiguous invocation
+        m(1 , 2 );
+
+
+
         // System.out.println(testVOID(55)) ; a void method must be a statement
         //                                   print do not resolve a void as a parameter
 
@@ -18,6 +24,13 @@ public class TEST {
         }
         System.out.println("i is " + i);
         System.out.println(0%3); // 0
+
+space
+1
+2 1
+2 1
+4 2 1
+i is 5
         */
 
 
@@ -41,5 +54,16 @@ public class TEST {
         System.out.println();
 
     }*/
+
+public static void m ( double a  , double b  )
+{
+    System.out.println((a+b) +  "    two double "  );
+}
+public static void m ( double b ,  int a  )
+{
+    System.out.println(a+b );
+}
+
+
 
 }
