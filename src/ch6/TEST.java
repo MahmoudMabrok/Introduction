@@ -9,7 +9,7 @@ public class TEST {
     public static void main(String[] args) {
 
         //test ambiguous invocation
-        m(1 , 2 );
+        m(1 , 2.0 );
 
 
 
