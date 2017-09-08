@@ -16,7 +16,7 @@ public class FutureTutition {
 
 
         int  Tut = 10_000 ;
-        for (int i = 0; i <10; i++) {
+        for (int i = 0; i < 10; i++) {
             Tut *= 1.05 ;
         }
         System.out.println(Tut); // Tut after ten Years

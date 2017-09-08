@@ -14,7 +14,7 @@ public class TEST
         System.out.println(x != y); // equivalent to logical xor
 */
 
-
+        System.out.println(11 * 11 );
 
     }
 }

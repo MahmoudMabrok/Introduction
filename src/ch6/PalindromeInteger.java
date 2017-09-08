@@ -16,20 +16,19 @@ package ch6;
 public class PalindromeInteger {
     public static void main(String[] args) {
 
-        System.out.println(isPalendrom( 121 ));
+        System.out.println(isPalendrom( 2 ));
     }
 
     public static   boolean isPalendrom ( int  n )
     {
 
         long reverse = getReverse(n ) ;
-        System.out.println(reverse);
         return  reverse == n  ;
     }
 
-    public static long  getReverse (int n )
+    public static int getReverse (int n )
     {
-        long newnum = 0  ;
+        int newnum = 0  ;
         int n_digit = getNumOfDigit(n) ;
 
         for (int i = 0; i <n_digit ; i++) {

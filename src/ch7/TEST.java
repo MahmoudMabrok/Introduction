@@ -23,6 +23,16 @@ public class TEST {
              System.out.println(e); // output is all element is 1
         }*/
 
+       /* int[] myList;
+        myList = new int[10];
+        // Sometime later you want to assign a new array to myList
+        myList = new int[20]; // create a new one 
+        */
+
+
+        int[] m = {  1,2,3  , 8 , 7 , 6 } ;
+        ArrayOPeration.selectionSort(m);
+        ArrayOPeration.display(m);
 
 
     }
