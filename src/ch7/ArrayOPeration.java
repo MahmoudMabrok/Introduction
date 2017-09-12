@@ -39,6 +39,21 @@ public class ArrayOPeration {
         for (int e : values)
             System.out.println(e);
     }
+    public static void display(int[][] values) {
+        for (int[] e : values) {
+            for (int i : e)
+                System.out.print(i + "  ");
+            System.out.println("");
+        }
+    }
+
+    public static void display(char[][] values) {
+        for (char[] e : values) {
+            for (char i : e)
+                System.out.print(i + "  :  ");
+            System.out.println("");
+        }
+    }
 
     public static int[] getRandomArr( int size  , int start  , int end ) {
 

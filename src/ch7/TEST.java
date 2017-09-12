@@ -14,7 +14,7 @@ public class TEST {
          because u don not set size of array
           */
 
-       /* int[] m = {  1,2,3 } ;
+       /* int[] test = {  1,2,3 } ;
         for (int i = 1; i < m.length; i++) {
             m[i] = m[i-1] ;
         }
