@@ -39,6 +39,10 @@ public class ArrayOPeration {
         for (int e : values)
             System.out.println(e);
     }
+    public static void display(String[] values) {
+        for (String e : values)
+            System.out.println(e);
+    }
     public static void display(int[][] values) {
         for (int[] e : values) {
             for (int i : e)
