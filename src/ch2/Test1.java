@@ -19,7 +19,7 @@ public class Test1 {
         System.out.println(y=++x+x++);
         System.out.println(y);*/
 
-     //   System.out.println((int)(d*1000)/ 1000.0); tested
+        System.out.println((int)(444.347865*1000)/ 1000.0); //tested
 
         /*for (int i = 0; i < 50; i++) {
             System.out.println( (int)(Math.random()*2)); // return 0.1 randomly
