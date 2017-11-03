@@ -4,9 +4,12 @@ package ch15;/**
  */
 
 import javafx.application.Application;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseDragEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -29,7 +32,9 @@ public class MouseEvant extends Application {
 
         v.getChildren().addAll(l,ll );
 
-        v.setOnMouseEntered(e->
+
+        //as mouse enter the scene
+        /*v.setOnMouseEntered(e->
         {
             double x = e.getX() ;
             double y = e.getY() ;
@@ -40,12 +45,22 @@ public class MouseEvant extends Application {
             );
 
         });
+*/
+        //as click and drag (يشد )
 
-        v.setOnMouseDragged(e->
-        ll.setText("Dragged "))
-        ;
+        //there error
+        /*v.setOnMouseDragged(
+                new EventHandler<MouseDragEvent>() {
+                    public void handle(MouseDragEvent  e )
+                    {
 
+                        ll.setText("Dragged ")   ;
+                    }
+                }
+        )
+        ;*/
 
+/*
         l.setOnMouseClicked(e ->
         {
             double x = e.getX() ;
@@ -57,6 +72,8 @@ public class MouseEvant extends Application {
                              );
 
         });
+  */
+
         Scene scene = new Scene(v);
         primaryStage.setScene(scene);
         primaryStage.setTitle("MouseEvant");
