@@ -39,9 +39,12 @@ public class KeyEvent extends Application {
 
         });
 
+
         t.setOnKeyPressed(e -> {
 
-            System.out.println("sassa");
+            for (int i = 0; i <5 ; i++) {
+                System.out.println("a");
+            }
             switch (e.getCode())
             {
 
@@ -49,8 +52,7 @@ public class KeyEvent extends Application {
                 case RIGHT:t.setText("Right Arrow");
                 case F1: t.setText("F1");
             }
-           // t .setText(e.getCharacter());
-            t.setText(e.getCode().getName());
+            t.setText(String.valueOf(e.getCode()));
 
         });
 

@@ -80,7 +80,7 @@ public class TestHanderler extends Application {
 
 }
 
-class e {
+class ew {
     //to make instance of inner from another class
 //first make a obj of outer class (to see it )
 //if inner is static you use new Outer.Inner(); only
