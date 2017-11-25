@@ -10,6 +10,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
@@ -52,6 +53,7 @@ public class MO3tamed extends Application {
         v.getChildren().add(r) ;
         v.getChildren().add(hl) ;
 
+
         PathTransition p = new PathTransition() ;
         p.setPath(c);
         p.setCycleCount(Timeline.INDEFINITE );
@@ -61,6 +63,10 @@ public class MO3tamed extends Application {
        p.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
       //  p.setAutoReverse(true);
         p.play();
+
+        CheckBox ch = new CheckBox("yes" , new ImageView ("img1.png")) ;
+        v.getChildren().add(ch) ;
+
 
         c.setOnMousePressed(e-> {
                     if (e.getClickCount() == 2)
