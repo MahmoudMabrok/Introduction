@@ -2,6 +2,8 @@ package ch23;
 
 import ch7.ArrayOPeration;
 
+import java.util.ArrayList;
+
 /**
  * this is
  * Created by mo3tamed on 2/4/18.
@@ -11,8 +13,11 @@ public class Sorting {
     public static void main(String[] args) {
         int[] val = new int[]{5, 2, 1, 6, 8, 3, 0};
 
+        Integer[] valI = new Integer[]{5, 2, 1, 6, 8, 3, 0};
+
         for (int e : val)
             System.out.print(e + "\t");
+        System.out.println("\n**********************");
 /*
 
         System.out.println("\nInsertion ^_^");
@@ -24,12 +29,18 @@ public class Sorting {
            /* System.out.println("\nMerge ^_^");
            mergeSort(val);
 */
-        System.out.println("\nQuickSort");
+       /* System.out.println("\nQuickSort");
         quickSort(val);
+*/
 
-        for (int e : val)
+        for (int e : bucketSort(valI , 8 ))
+            System.out.print(e + "\t");
+/*
+
+        for (int e : bucketSort(valI , 8 ))
             System.out.print(e + "\t");
 
+*/
 
     }
 
@@ -156,5 +167,32 @@ public class Sorting {
 
     }
 
+
+    public static Integer[] bucketSort(Integer [] values  , int max )
+    {
+
+        ArrayList<Integer>[]  bucket = new ArrayList[max+1] ;
+
+        Integer  key ;
+        for (int i = 0; i < values.length; i++) {
+            key = values[i] ;
+
+            if (bucket [key] == null )
+                bucket[key] = new ArrayList<>() ;
+
+            bucket[key].add(key);
+        }
+
+        int k =0 ;
+        for (int i = 0; i <bucket.length ; i++) {
+
+            if(bucket[i] != null)
+                for (int j = 0; j <bucket[i].size() ; j++) {
+                    values[k++] = bucket[i].get(j);
+                }
+        }
+
+        return values ;
+    }
 
 }
