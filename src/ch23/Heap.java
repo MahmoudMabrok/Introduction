@@ -59,18 +59,38 @@ public class Heap <T extends  Comparable<T> > {
 
         if (list.size() == 0 )
             return null ;
+        T root = list.get(0);
 
         list.set(0,list.get(list.size()-1));
         list.remove(list.size()-1) ;
 
 
         int currentIndex = 0 ;
-        int right  , left ;
-        while (){
+        int right  , left , maxIndex ;
+        while (currentIndex < list.size()){
             right = (2*currentIndex)+2 ;
             left = 2*currentIndex +1 ;
 
+            if (left >= list.size()) break; // leaf or tree is heap
 
+            maxIndex = left ;
+            if (list.get(maxIndex).compareTo(list.get(right)) < 0)
+                maxIndex=right;
+
+            //swap with its greatest child
+            if (list.get(currentIndex).compareTo(list.get(maxIndex)) < 0 )
+            {
+                T temp = list.get(currentIndex) ;
+                list.set(currentIndex , list.get(maxIndex)) ;
+                list.set(maxIndex , temp) ;
+                currentIndex =maxIndex ;
+            }
+            else
+                break; // it is heap
+        }
+
+
+        return  root ;
     }
 
 
