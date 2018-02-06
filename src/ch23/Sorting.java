@@ -3,6 +3,7 @@ package ch23;
 import ch7.ArrayOPeration;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * this is
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 public class Sorting {
 
     public static void main(String[] args) {
-        int[] val = new int[]{5, 2, 1, 6, 8, 3, 0};
+        int[] val = new int[]{5, 2, 10, 61, 118, 3, 0};
 
         Integer[] valI = new Integer[]{5, 2, 1, 6, 8, 3, 0};
 
@@ -33,14 +34,17 @@ public class Sorting {
         quickSort(val);
 */
 
-        for (int e : bucketSort(valI , 8 ))
-            System.out.print(e + "\t");
-/*
-
-        for (int e : bucketSort(valI , 8 ))
+        /*for (int e : bucketSort(valI , 8 ))
             System.out.print(e + "\t");
 
-*/
+        */
+
+
+        radixSort(val);
+
+        for (int e : val)
+            System.out.print(e + "\t");
+
 
     }
 
@@ -193,6 +197,59 @@ public class Sorting {
         }
 
         return values ;
+    }
+
+    public static void radSort(int [] values  , int radix ,int current  )
+    {
+
+        ArrayList<Integer>[]  bucket = new ArrayList[10] ;
+
+        if (current <= radix ) {
+            int key, temp;
+            for (int i = 0; i < values.length; i++) {
+                temp = values[i];
+                for (int j = 1; j < current; j++) {
+                    temp /= 10;
+                }
+                key = temp % 10;
+                if (bucket[key] == null)
+                    bucket[key] = new ArrayList<>();
+
+                bucket[key].add(values[i]);
+            }
+
+            int k = 0;
+            for (int i = 0; i < bucket.length; i++) {
+
+                if (bucket[i] != null)
+                    for (int j = 0; j < bucket[i].size(); j++) {
+                        values[k++] = bucket[i].get(j);
+                    }
+            }
+
+            current ++;
+            radSort(values,radix,current);
+        }
+
+    }
+    public static void radixSort (int[] values ){
+
+      radSort(values ,getNumberOfDigit(values) ,1 );
+
+    }
+    public static int getNumberOfDigit(int[] values){
+        Arrays.sort(values);
+        int max = values[values.length-1] ;
+
+        int c = 0;
+        while (max>0){
+            max/=10;
+            c++;
+        }
+
+        return  c ;
+
+
     }
 
 }
