@@ -16,7 +16,10 @@ public class TestHeap {
 
 
         System.out.println(h);
-        System.out.println(h.remove1());
+        System.out.println(h.remove());
+        System.out.println(h);
+
+System.out.println(h.remove());
         System.out.println(h);
 
     }

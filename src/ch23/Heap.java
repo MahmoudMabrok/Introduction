@@ -71,10 +71,11 @@ public class Heap <T extends  Comparable<T> > {
             right = (2*currentIndex)+2 ;
             left = 2*currentIndex +1 ;
 
-            if (left >= list.size()) break; // leaf or tree is heap
+            if (left >= list.size() ) break; // leaf or tree is heap
 
             maxIndex = left ;
-            if (list.get(maxIndex).compareTo(list.get(right)) < 0)
+            if ( right< list.size() &&
+                 list.get(maxIndex).compareTo(list.get(right)) < 0) //check max under it has two child
                 maxIndex=right;
 
             //swap with its greatest child
@@ -91,6 +92,10 @@ public class Heap <T extends  Comparable<T> > {
 
 
         return  root ;
+    }
+    public int getSize ()
+    {
+        return list.size() ;
     }
 
 
