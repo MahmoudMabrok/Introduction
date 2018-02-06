@@ -7,14 +7,15 @@ package ch23;
 public class Insertion {
 
 
-    /*public static<T> void  insertion(T[] values ) {
+    public static<T extends  Comparable <T>> void  insertion(T[] values ) {
 
         for (int i = 1; i <values.length ; i++) {
             T temp = values[i] ;
             int k = i-1 ;
-            while (k >= 0  && value)
+            while (k >= 0  && values[k].compareTo(temp) > 0 );
+
         }
 
-    }*/
+    }
 
 }
