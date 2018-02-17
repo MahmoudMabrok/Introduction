@@ -23,6 +23,9 @@ public class TestMyLinkedList {
         list.display();
         list.removeLast();
         list.display();
+        list.add(1 , "Last");
+        list.add(1 , "Last1");
+        list.display();
 
 
     }

@@ -25,10 +25,9 @@ private  Node<E> tail ;
 
     public void addLast(E e ){
         Node<E> node = new Node<E>(e) ;
-        if (head == null )
+        if (tail == null )
         {
-            head = node ;
-            tail = head ;
+            head = tail= node ;
         }else{
             tail.next = node ;
             tail = node ;
@@ -36,6 +35,7 @@ private  Node<E> tail ;
         size++;
 
     }
+
     public E getFirst (){
         if (head == null ){
             return  null ;
@@ -55,21 +55,16 @@ private  Node<E> tail ;
 
     public E removeFirst(){
 
-        E temp = null  ;
+        Node <E> temp = head ;
         if (size==0 )
             return  null ;
-        else if (size == 1 ){
-            temp = head.element ;
-            head = null ;
-            tail = head ;
-            size = 0  ;
-        }else
-        {
-            temp = head.element ;
-            head = head.next ;
-            size-- ;
+        else {
+            head=head.next;
+            size--;
         }
-        return  temp ;
+        if (head == null ) tail=null; //became empty
+
+        return  temp.element ;
     }
     public E removeLast(){
         E temp = null ;
@@ -112,6 +107,19 @@ private  Node<E> tail ;
     @Override
     public void add(int index, E e) {
 
+        if (index == 0) addFirst(e);
+        else if (index >= size ) addLast(e);  // greater than contains case it empty
+                                                // and aim to add at index more size
+        else{ //middle
+            Node<E> node = new Node<E>(e) ;
+            Node<E> current = head ;
+            for (int i = 0; i <index-1 ; i++) {
+                current = current.next ;
+            }
+            node.next = current.next ;
+            current.next = node ;
+            size++ ;
+        }
     }
 
     @Override
