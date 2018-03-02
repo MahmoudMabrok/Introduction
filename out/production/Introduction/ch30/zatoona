@@ -1,0 +1,13 @@
+* printA.run(); will run sequential in same thread
+* t.start();
+         t.start();//Exception in thread "main" java.lang.IllegalThreadStateException
+                 // as threadStatus is became not zero , so you ca not start it (already started)
+
+*Thread.sleep -- Causes the currently executing thread to sleep.
+*Java forces u to catch checked Exception
+* loop must be inside try-catch in case of InterruptedException
+* Thread class imp Runnable so u can create task class by extends Thread and override run
+
+
+
+
