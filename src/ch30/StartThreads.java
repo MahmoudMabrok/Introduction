@@ -57,10 +57,11 @@ class printChar implements  Runnable {
         try {
         for (int i = 0; i <n ; i++) {
             System.out.println(c  + " "+i);
-               // Thread.yield();
+                Thread.sleep(1);
         }
-    }catch(Exception e)
+    }catch(InterruptedException e)
         {
+            e.printStackTrace();
         }
     }
 }
