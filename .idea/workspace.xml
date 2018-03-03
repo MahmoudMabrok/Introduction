@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="391a504d-3539-4be5-a2d3-c1ead2b7ef76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch31/ChatClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch31/ChatServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Introduction/ch30/FlashText$1.class" afterPath="$PROJECT_DIR$/out/production/Introduction/ch30/FlashText$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Introduction/ch30/printChar.class" afterPath="$PROJECT_DIR$/out/production/Introduction/ch30/printChar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Introduction/ch30/printNum.class" afterPath="$PROJECT_DIR$/out/production/Introduction/ch30/printNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Introduction.iml" afterPath="$PROJECT_DIR$/Introduction.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Introduction/ch30/zatoona" afterPath="$PROJECT_DIR$/out/production/Introduction/ch30/zatoona" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch30/StartThreads.java" afterPath="$PROJECT_DIR$/src/ch30/StartThreads.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch30/zatoona" afterPath="$PROJECT_DIR$/src/ch30/zatoona" />
-    </list>
+    <list default="true" id="391a504d-3539-4be5-a2d3-c1ead2b7ef76" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +40,8 @@
       <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ch31/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="74" column="43" lean-forward="true" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+            <state relative-caret-position="223">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#662#663#0" expanded="true" />
@@ -1148,7 +1136,7 @@
       <workItem from="1519924285422" duration="48000" />
       <workItem from="1520022524070" duration="678000" />
       <workItem from="1520052001947" duration="936000" />
-      <workItem from="1520078066341" duration="8089000" />
+      <workItem from="1520078066341" duration="8178000" />
     </task>
     <task id="LOCAL-00001" summary="ch15">
       <created>1509707022746</created>
@@ -1217,7 +1205,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364950000" />
+    <option name="totallyTimeSpent" value="365039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1251,9 +1239,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="569" y="349" width="659" height="281" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23510467" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510467" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28180355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28180355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2031722" sideWeight="0.48929664" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1622,8 +1610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch31/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="74" column="43" lean-forward="true" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+        <state relative-caret-position="223">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#662#663#0" expanded="true" />

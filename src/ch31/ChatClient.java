@@ -76,7 +76,7 @@ public class ChatClient extends Application {
                         ta.appendText(server + res + '\n');
 
                     });
-S
+
                     Thread.sleep(100);
 
                 }catch (InterruptedException e){
