@@ -52,6 +52,8 @@ public class ChatServer extends Application {
         sendPane.getChildren().addAll(text ,send);
         root.getChildren().addAll( welcome, sp , sendPane) ;
 
+        send.setDisable(true);
+
         send.setOnAction(e->{
             try {
                 out.writeUTF(text.getText().toString());
@@ -66,12 +68,23 @@ public class ChatServer extends Application {
         new Thread(() ->{
             try {
                ServerSocket serverSocket = new ServerSocket(8000) ;
+                Socket socket = serverSocket.accept(); // block connection is made
+                out = new DataOutputStream(socket.getOutputStream()); // make output stream
+                send.setDisable(false);
+                DataInputStream in = new DataInputStream(socket.getInputStream()) ;
 
-
-                   Socket socket  = serverSocket.accept(); // block connection is made
-                   out = new  DataOutputStream(socket.getOutputStream()); // make output stream
+                while(true){
+                    String s = in.readUTF() ;
+                    Platform.runLater(()->{
+                        ta.appendText(server + s+'\n');
+                    });
+                }
+/*
+               while (true) {
+                   Socket socket = serverSocket.accept(); // block connection is made
+                   out = new DataOutputStream(socket.getOutputStream()); // make output stream
                    new Thread(new HandleCLient(socket)).start(); // handle input  from user
-
+               }*/
 
             }catch (IOException e){
                 e.printStackTrace();
@@ -117,6 +130,7 @@ public class ChatServer extends Application {
 
                 DataInputStream in = new DataInputStream(socket.getInputStream());
                 String s = in.readUTF() ;
+                System.out.println(s+" sasas  ");
                 Platform.runLater(()->{
                     ta.appendText(server + s +'\n');
                 });

@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.IOException;
 import java.net.*;
 
@@ -51,35 +52,29 @@ public class ChatClient extends Application {
             try {
                 ta.appendText(user + text.getText().toString() + '\n');
                 out.writeUTF(text.getText().toString());
-
-              //  out.flush();
-
-
-
             }catch (IOException ex){
                 ex.printStackTrace();
             }
         });
 
-
         try{
-
             Socket socket = new Socket( "localhost",8000 ) ;
-            in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream()) ;
-
 
             new Thread( () ->{
                 try {
-                    String res = in.readUTF();
-                    Platform.runLater(()->{
-                        ta.appendText(server + res + '\n');
-
-                    });
-
-                    Thread.sleep(100);
-
-                }catch (InterruptedException e){
+                    in = new DataInputStream(socket.getInputStream());
+                    while(true) {
+                        String res = in.readUTF();
+                        Platform.runLater(() -> {
+                            ta.appendText(server + res + '\n');
+                        });
+                        Thread.sleep(100);
+                    }
+                }catch (EOFException e ){
+                    e.printStackTrace();
+                }
+                catch (InterruptedException e){
                     e.printStackTrace();
                 }
                 catch (IOException e ){
